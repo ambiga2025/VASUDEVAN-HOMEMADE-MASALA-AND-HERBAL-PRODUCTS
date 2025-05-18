@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vasudevan Home Made Masala</title>
+  <style>
+    :root {
+      --primary-bg: #2c3e50;
+      --secondary-bg: #34495e;
+      --highlight: #f0c040;
+      --hover: #ffc107;
+      --text: #333;
+      --white: #fff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary-bg);
+      color: var(--white);
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: var(--secondary-bg);
+    }
+
+    nav a {
+      color: var(--white);
+      padding: 12px 16px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      background-color: #3b5998;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: var(--primary-bg);
+      color: var(--white);
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    button#language-toggle {
+      background-color: var(--highlight);
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    button#language-toggle:hover {
+      background-color: var(--hover);
+    }
+
+    a.email-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 18px;
+      color: var(--primary-bg);
+      text-decoration: none;
+      background-color: var(--highlight);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    a.email-link:hover {
+      background-color: var(--hover);
+    }
+
+    .tamil-content {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      section {
+        padding: 20px 15px;
+      }
+
+      button#language-toggle,
+      a.email-link {
+        font-size: 14px;
+        padding: 8px 14px;
+      }
+
+      h1, h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+
+  <script>
+    let isTamil = false;
+
+    function toggleLanguage() {
+      const english = document.querySelectorAll('.english-content');
+      const tamil = document.querySelectorAll('.tamil-content');
+      const button = document.getElementById('language-toggle');
+
+      english.forEach(el => el.style.display = isTamil ? 'block' : 'none');
+      tamil.forEach(el => el.style.display = isTamil ? 'none' : 'block');
+      button.textContent = isTamil ? 'Translate to Tamil' : 'Translate to English';
+      isTamil = !isTamil;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.tamil-content').forEach(el => el.style.display = 'none');
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1 class="english-content">Vasudevan Home Made Masala</h1>
+    <h1 class="tamil-content" lang="ta">வாஸுதேவன் ஹோம்மேட் மசாலா</h1>
+    <p class="english-content">Authentic flavors crafted with love</p>
+    <p class="tamil-content" lang="ta">உணவிற்கான அற்புதமான ருசிகள், வீட்டில் தயாரிக்கப்படும்.</p>
+    <button id="language-toggle" onclick="toggleLanguage()">Translate to Tamil</button>
+  </header>
+
+  <nav>
+    <a href="#home" class="english-content">Home</a>
+    <a href="#home" class="tamil-content" lang="ta">முகப்பு</a>
+    <a href="#masalas" class="english-content">Masalas</a>
+    <a href="#masalas" class="tamil-content" lang="ta">மசாலா வகைகள்</a>
+    <a href="#flours" class="english-content">Flours</a>
+    <a href="#flours" class="tamil-content" lang="ta">மாவுகள்</a>
+    <a href="#powders" class="english-content">Powders</a>
+    <a href="#powders" class="tamil-content" lang="ta">தூள்கள்</a>
+    <a href="#healthmix" class="english-content">Health Mix</a>
+    <a href="#healthmix" class="tamil-content" lang="ta">ஆரோக்கிய கலவைகள்</a>
+    <a href="#care" class="english-content">Bath & Hair Care</a>
+    <a href="#care" class="tamil-content" lang="ta">மூலிகை பராமரிப்பு</a>
+    <a href="#contact" class="english-content">Contact</a>
+    <a href="#contact" class="tamil-content" lang="ta">தொடர்பு</a>
+  </nav>
+
+  <section id="home">
+    <h2 class="english-content">Welcome to Vasudevan Home Made Masala</h2>
+    <h2 class="tamil-content" lang="ta">வாஸுதேவன் ஹோம்மேட் மசாலாவிற்கு வரவேற்கிறோம்</h2>
+    <p class="english-content">We specialize in making authentic homemade masalas, flours, powders, and health mixes using the finest ingredients.</p>
+    <p class="tamil-content" lang="ta">சிறந்த பொருட்களை பயன்படுத்தி, பாரம்பரிய மசாலா, மாவு, தூள் மற்றும் ஆரோக்கிய கலவைகள் தயாரிக்கிறோம்.</p>
+  </section><section id="masalas">
+  <h2 class="english-content">Masalas</h2>
+  <h2 class="tamil-content" lang="ta">மசாலா வகைகள்</h2>
+  <p class="english-content">Traditional spice blends for all your South Indian dishes.</p>
+  <p class="tamil-content" lang="ta">தென்னிந்திய உணவுகளுக்கான பாரம்பரிய மசாலா கலவைகள்.</p>
+  <ul class="english-content">
+    <li>Kulambu Masala</li>
+    <li>Briyani Masala</li>
+    <li>Sambar Powder</li>
+    <li>Rasam Powder</li>
+    <li>Fish Curry Masala</li>
+    <li>Mutton Masala</li>
+    <li>Chicken Masala</li>
+    <li>Mutton Curry Masala</li>
+    <li>Chicken Curry Masala</li>
+    <li>Garam Masala</li>
+    <li>Prawn Roast Masala</li>
+    <li>Crab Gravy Masala</li>
+    <li>Idly Chilli Powder</li>
+  </ul>
+  <ul class="tamil-content" lang="ta">
+    <li>குழம்பு மசாலா</li>
+    <li>பிரியாணி மசாலா</li>
+    <li>சாம்பார் பொடி</li>
+    <li>ரசம் பொடி</li>
+    <li>மீன் குழம்பு மசாலா</li>
+    <li>மட்டன் மசாலா</li>
+    <li>சிக்கன் மசாலா</li>
+    <li>மட்டன் கறி மசாலா</li>
+    <li>சிக்கன் கறி மசாலா</li>
+    <li>காரம் மசாலா</li>
+    <li>இறால் வறுவல் மசாலா</li>
+    <li>நண்டு கிரேவி மசாலா</li>
+    <li>இட்லி மிளகாய் பொடி</li>
+  </ul>
+</section>
+
+<section id="flours">
+  <h2 class="english-content">Flours</h2>
+  <h2 class="tamil-content" lang="ta">மாவுகள்</h2>
+  <p class="english-content">Freshly ground flours for daily cooking needs.</p>
+  <p class="tamil-content" lang="ta">தினசரி சமையலுக்கான புதிய மாவுகள்.</p>
+  <ul class="english-content">
+    <li>Wheat Flour</li>
+    <li>Samba Wheat Flour</li>
+    <li>Gram Flour</li>
+    <li>Rice Flour</li>
+    <li>Ragi Flour</li>
+    <li>Kambu Flour</li>
+    <li>Cholam Flour</li>
+  </ul>
+  <ul class="tamil-content" lang="ta">
+    <li>கோதுமை மாவு</li>
+    <li>சாம்பா கோதுமை மாவு</li>
+    <li>கடலை மாவு</li>
+    <li>அரிசி மாவு</li>
+    <li>ராகி மாவு</li>
+    <li>கம்பு மாவு</li>
+    <li>சோளம் மாவு</li>
+  </ul>
+</section>
+
+<section id="powders">
+  <h2 class="english-content">Powders</h2>
+  <h2 class="tamil-content" lang="ta">தூள்கள்</h2>
+  <p class="english-content">Pure and natural basic kitchen powders.</p>
+  <p class="tamil-content" lang="ta">சுத்தமான இயற்கை சமையல் தூள்கள்.</p>
+  <ul class="english-content">
+    <li>Turmeric Powder</li>
+    <li>Chilli Powder</li>
+    <li>Coriander Powder</li>
+    <li>Idly Chilli Powder</li>
+    <li>Wheat Rava</li>
+    <li>Samba Wheat Rava</li>
+    <li>Bajji Bonda Mix</li>
+  </ul>
+  <ul class="tamil-content" lang="ta">
+    <li>மஞ்சள் தூள்</li>
+    <li>மிளகாய் தூள்</li>
+    <li>கொத்தமல்லி தூள்</li>
+    <li>இட்லி மிளகாய் தூள்</li>
+    <li>கோதுமை ரவா</li>
+    <li>சாம்பா கோதுமை ரவா</li>
+    <li>பஜ்ஜி போண்டா கலவை</li>
+  </ul>
+</section>
+
+<section id="healthmix">
+  <h2 class="english-content">Health Mix</h2>
+  <h2 class="tamil-content" lang="ta">ஆரோக்கிய கலவைகள்</h2>
+  <p class="english-content">Nutritious blends for healthy living.</p>
+  <p class="tamil-content" lang="ta">ஆரோக்கியமான வாழ்விற்கு சத்து நிறைந்த கலவைகள்.</p>
+  <ul class="english-content">
+    <li>Health Mix</li>
+    <li>Ulundhu Kali Mix</li>
+    <li>Instant Murukku Maavu</li>
+    <li>Rice Rava Uppuma Mix</li>
+    <li>Rava Dosa Mix</li>
+    <li>Rava Idly Mix</li>
+    <li>Multigrain Dosa Mix</li>
+  </ul>
+  <ul class="tamil-content" lang="ta">
+    <li>ஆரோக்கிய கலவை</li>
+    <li>உளுந்து களி கலவை</li>
+    <li>இன்ஸ்டாண்ட் முருக்கு மாவு</li>
+    <li>அரிசி ரவா உப்புமா கலவை</li>
+    <li>ரவா தோசை கலவை</li>
+    <li>ரவா இட்லி கலவை</li>
+    <li>பன்மாசல் தோசை கலவை</li>
+  </ul>
+</section>
+
+<section id="care">
+  <h2 class="english-content">Bath & Hair Care</h2>
+  <h2 class="tamil-content" lang="ta">மூலிகை பராமரிப்பு</h2>
+  <p class="english-content">Herbal care powders for skin and hair.</p>
+  <p class="tamil-content" lang="ta">தோல் மற்றும் முடிக்கான மூலிகை பராமரிப்பு தூள்கள்.</p>
+  <ul class="english-content">
+    <li>Herbal Bath Powder</li>
+    <li>Herbal Shikakai Powder</li>
+  </ul>
+  <ul class="tamil-content" lang="ta">
+    <li>மூலிகை குளியல் தூள்</li>
+    <li>மூலிகை சிகைக்காய் தூள்</li>
+  </ul>
+</section>
+    <p class="english-content">For orders and inquiries, send us an email:</p>
+    <p class="tamil-content" lang="ta">ஆணைகள் மற்றும் விசாரணைகளுக்கு, எங்களுக்கு மின்னஞ்சல் அனுப்பவும்:</p>
+    <a class="email-link english-content" href="mailto:your-email@gmail.com">Email Us</a>
+    <a class="email-link tamil-content" lang="ta" href="mailto:your-email@gmail.com">மின்னஞ்சல் அனுப்பு</a>
+  </section>
+
+  <footer>
+    <p class="english-content">&copy; 2025 Vasudevan Home Made Masala. All rights reserved.</p>
+    <p class="tamil-content" lang="ta">&copy; 2025 வாஸுதேவன் ஹோம்மேட் மசாலா. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+    <p class="english-content">FSSAI No. 22424118000276</p>
+    <p class="tamil-content" lang="ta">எஃப்எஸ்எஸ்ஏஐ எண்: 22424118000276</p>
+  </footer>
+
+</body>
+</html>
